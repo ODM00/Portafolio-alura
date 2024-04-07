@@ -1,0 +1,406 @@
+:root{
+    --main-color:#F5F5F5;
+    --second-color: #eaf2fd;
+    --font-color: #464646;
+    --card-color: #FFFFFF;
+    --blue:#2A7AE4;
+}
+html{
+    background-color: var(--main-color);
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;}
+
+/* Header */
+.header{
+    position: sticky;
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+    z-index: 999;
+}
+.header .logo{
+    display: flex;
+    justify-content: baseline;
+    padding: 1rem;
+    color: var(--font-color);
+}
+.header .logo span{
+font-weight: bold;
+text-align: center;
+padding-left: 1rem;
+color:var(--font-color);
+}
+.header .contact-mobile{
+    padding: 1rem;
+}
+.header .contact-mobile a{
+color: var(--font-color);
+text-decoration: none;    
+}
+.header .menu{
+    display: flex;
+    display: none;
+}
+.header .menu a{
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--font-color);
+}
+.profile-img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    padding-left: 1rem;
+    order: 1;
+}
+
+h2{
+    color: var(--font-color);
+    text-align: start;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+p{
+    color: var(--font-color);
+    text-align: start;
+    margin: 0 auto;
+    padding: 1rem ;
+    padding-top:0 ;
+}
+
+.links{
+    padding: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.links a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+/* About */
+#about{
+    background-color: var(--second-color);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+#about h2{
+    margin: 0 0;
+}
+
+.sign{
+    width: 8rem;
+    height: auto;
+    align-self: flex-end;
+}
+
+/* Skills & Hobbies*/
+
+#skills, #hobbies{
+    padding: 4rem 1rem;
+}
+ .section-title {
+    text-align: center;
+}
+.cards{
+    padding: 1rem 0 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(7rem,1fr));
+    grid-gap: 1rem;
+}
+.card{
+    background-color: var(--card-color);
+    color: var(--fonts-color);
+    text-align: center;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.card img{
+    padding: 1rem;
+    height: 6rem;
+    width: auto;
+}
+/* Training Academy*/
+#training {
+    background-color: var(--second-color);
+    margin: 0 auto;
+    padding: 4rem ;
+}
+#training figcaption{
+    padding: 1rem 0 0 0;
+    font-size: 1rem;
+    text-align: start;
+    font-weight: bold;
+}
+.flex-training{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+
+}
+.card-training{
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--card-color);
+    color: var(--fonts-color);
+    text-align: center;
+}
+.card-training img, .card-training svg{
+    padding: 1rem;
+    height: 6rem;
+    width: auto;
+}
+.card-training span{
+    display: block;
+    font-size: 1rem;
+    text-align: start; 
+    padding-bottom: 1rem;    
+}
+
+.foot{
+    background-color: var(--second-color);
+    padding: 1rem;
+    padding-top: 0;
+}
+/* Experiencia profesional*/
+
+#proyects {
+    padding: 4rem 2rem;
+}
+#proyects img{
+    width: 100%;
+    height: auto;
+    padding-bottom:0;
+    margin: 0 auto;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.btns a{
+    display: block;
+    width: 8rem;
+    padding: 1rem;
+    text-decoration: none;
+    border: thin solid var(--blue) ;
+    text-align: center;
+}
+.white-blue{
+    background-color: #fff;
+    color: var(--blue);
+}
+.blue-white{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+/* Contact Form*/
+#contact{
+    background-color: var(--second-color);
+    padding: 4rem 1rem;
+}
+.noneimg{
+    display: none;
+}
+.contact-form{
+    --form-ok-color:#4caf50;
+    --form-error-color: var(--font-color);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form >*{
+    display: block;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    width: 100%;
+}
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea{
+    font-family: monospace;
+    font-size: 1rem;
+}
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--blue);
+    color:var(--card-color);
+    
+}
+
+.contact-form *::placeholder{
+    color:var(--font-color)
+}
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 500ms ease;
+}
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+.none{
+    display: none;
+}
+
+@keyframes show-message {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 48rem) {
+    .presentation{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 2rem;
+    }
+    .profile-img{
+        width: 9rem;
+        height: 9rem;
+        padding-right: 2rem;
+    }
+    .flex-training{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--second-color);
+    }
+    .card-training{
+        margin: 0 1rem;
+    }
+    .btns{
+        justify-content: left;
+        padding-left: 1rem;
+    }
+    .btns a{
+        margin-right: 2rem;
+    }
+
+}
+
+@media screen and (min-width:64rem) {
+
+    body{
+        max-width:90rem ;
+        margin: 0 auto;
+    }
+    .contact-mobile{
+        display: none;
+    }
+    .header .menu{
+        display: initial;
+    }
+    .texts{
+        padding: 5%;
+    }
+    .texts h2{
+        font-size: 3rem;
+    }
+    .profile-img{
+        width: 23rem;
+        height: 23rem;
+    }
+    #about{
+        padding: 5%;
+    }
+    .text{
+        max-width: 70%;
+    }
+    .text h2{
+        font-size: xx-large;
+    }
+    #skills, #hobbies{
+        padding-bottom: 4rem;
+    }
+    #training{
+        padding: 4rem 0;
+    }
+    .proyect{
+        display: flex;
+        flex-direction: row;
+        padding-bottom:2rem ;
+    }
+   
+    .proyect-reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .info{
+        margin: auto 0;
+        padding: 1rem;
+    }
+    .btns{
+        padding: 0;
+        padding-top: 1rem;
+    }
+    #contact{
+        display: flex;
+        flex-direction: row;
+        padding-left: 1rem;
+    }
+    .noneimg {
+        display: initial;
+    }
+    .noneimg img{
+        width: 29rem;
+        height: auto;
+        border: thin solid var(--font-color);
+    }
+}
